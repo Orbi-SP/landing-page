@@ -1,0 +1,38 @@
+name: Deploy to S3
+
+on:
+  push:
+    branches:
+      - main  # A branch que você quer monitorar. Pode ser "main", "master" ou qualquer outra
+    # Para também monitorar reverts de commits, adicione `commits` e `reverted` como um filtro de tipos de evento.
+    types:
+      - created
+      - reverted
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checando o código do repositório
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Instalar o AWS CLI
+      - name: Set up AWS CLI
+        run: |
+          pip install awscli
+          aws --version
+
+      # Configurar credenciais da AWS
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1  # Substitua pela sua região AWS
+
+      # Sincronizar os arquivos com o bucket S3
+      - name: Deploy to S3
+        run: |
+          aws s3 sync ./public/ s3://savit-landingpage --delete
