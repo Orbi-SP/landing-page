@@ -35,4 +35,4 @@ jobs:
       # Sincronizar os arquivos com o bucket S3
       - name: Deploy to S3
         run: |
-          aws s3 sync ./public/ s3://savit-landingpage --delete
+          aws s3 sync ./ s3://savit-landingpage --delete
