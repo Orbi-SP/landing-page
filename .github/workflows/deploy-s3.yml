@@ -4,10 +4,6 @@ on:
   push:
     branches:
       - main  # A branch que você quer monitorar. Pode ser "main", "master" ou qualquer outra
-    # Para também monitorar reverts de commits, adicione `commits` e `reverted` como um filtro de tipos de evento.
-    types:
-      - created
-      - reverted
 
 jobs:
   deploy:
