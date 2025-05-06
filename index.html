@@ -1,45 +1,150 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste de Hospedagem no S3</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            font-size: 18px;
-            color: #555;
-        }
-        .container {
-            margin-top: 50px;
-        }
-        .btn {
-            padding: 10px 20px;
-            background-color: #0066cc;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .btn:hover {
-            background-color: #004d99;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Landing Page do Jogo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .logo-img {
+      max-width: 200px;
+      margin: 20px auto;
+      display: block;
+    }
+
+    .carousel-inner img {
+      border: 5px solid #333;
+    }
+
+    .parallax-section {
+      background-image: url('https://images.unsplash.com/photo-1602407294553-b17ac8e3402e?auto=format&fit=crop&w=1600&q=80');
+      min-height: 500px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sobre-container {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 50px 30px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 1100px;
+    }
+
+    .sobre-col {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #ff9100;
+    }
+
+    .team-photo {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 10px;
+      border: 3px solid #ba68c8;
+    }
+
+    .download-btn {
+      margin: 40px 0;
+    }
+
+    footer {
+      background-color: #222;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Bem-vindo ao Teste de Hospedagem no S3</h1>
-        <p>Este é um site simples hospedado no Amazon S3 para testes.</p>
-        <a href="https://www.amazon.com.br" class="btn">Visite a Amazon</a>
+
+  <!-- Header com logo -->
+  <header class="text-center">
+    <img src="https://picsum.photos/200/200?random=10" alt="Logo do Jogo" class="logo-img">
+  </header>
+
+  <!-- Carousel de imagens do jogo -->
+  <div id="carouselJogo" class="carousel slide w-75 mx-auto" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://picsum.photos/800/400?random=1" class="d-block w-100" alt="Imagem do jogo 1">
+      </div>
+      <div class="carousel-item">
+        <img src="https://picsum.photos/800/400?random=2" class="d-block w-100" alt="Imagem do jogo 2">
+      </div>
+      <div class="carousel-item">
+        <img src="https://picsum.photos/800/400?random=3" class="d-block w-100" alt="Imagem do jogo 3">
+      </div>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselJogo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselJogo" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <!-- Seção Parallax com sobreposição -->
+  <section class="parallax-section">
+    <div class="sobre-container text-white text-center">
+      <h2 class="mb-5">Sobre o Jogo</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="sobre-col">
+            <h4>Mecânicas e Jogabilidade</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet, nisi vel faucibus porttitor, 
+              ligula mi ultrices nisl, a scelerisque augue erat eget ligula.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="sobre-col">
+            <h4>Objetivo e História</h4>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+              totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipe -->
+  <section class="container text-center mt-5">
+    <h3>Equipe de Desenvolvimento</h3>
+    <div class="d-flex justify-content-center flex-wrap">
+      <img src="https://picsum.photos/150/150?random=4" alt="Membro 1" class="team-photo">
+      <img src="https://picsum.photos/150/150?random=5" alt="Membro 2" class="team-photo">
+      <img src="https://picsum.photos/150/150?random=6" alt="Membro 3" class="team-photo">
+      <img src="https://picsum.photos/150/150?random=7" alt="Membro 4" class="team-photo">
+    </div>
+  </section>
+
+  <!-- Botão de Download -->
+  <div class="text-center download-btn">
+    <a href="#" class="btn btn-warning btn-lg">Baixar o Jogo</a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-white text-center py-3">
+    &copy; 2025 Seu Nome ou Nome do Estúdio. Todos os direitos reservados.
+  </footer>
+
+  <!-- Scripts do Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
