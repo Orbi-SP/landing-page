@@ -106,10 +106,9 @@ body {
   filter: brightness(1);
 }
 
-.carousel-img {
-  width: 32%; /* para caber 3 lado a lado com espaçamento */
-  height: auto;
-  object-fit: contain;
+.carousel-item img {
+  object-fit: cover;
+  max-height: 500px;
 }
 
 /* Header transparente padrão */
