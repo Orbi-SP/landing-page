@@ -23,3 +23,19 @@ body {
   height: 35px;
   border-radius: 50%;
 }
+
+.glass-card-dark {
+  background: rgba(0, 0, 0, 0.35); /* fundo escuro com transparência */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* borda suave */
+  border-radius: 20px;
+  backdrop-filter: blur(10px); /* blur no fundo */
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6); /* sombra mais escura */
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.glass-card-dark:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
+}
