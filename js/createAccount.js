@@ -2,21 +2,24 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // Referências aos elementos do formulário
-    const loginForm = document.getElementById('loginForm');
-    const usernameField = document.getElementById('username');
+    const createAccountForm = document.getElementById('createAccountForm');
+    const nameField = document.getElementById('name');
+    const emailField = document.getElementById('email');
     const passwordField = document.getElementById('password');
-  
+    
     // Quando o formulário for enviado
-    loginForm.addEventListener('submit', function(event) {
+    createAccountForm.addEventListener('submit', function(event) {
       event.preventDefault(); // Evitar o envio padrão do formulário
   
       // Pegar os dados do formulário
-      const username = usernameField.value;
+      const name = nameField.value;
+      const email = emailField.value;
       const password = passwordField.value;
   
       // Criar o objeto que será enviado
       const userData = {
-        username: username,
+        name: name,
+        email: email,
         password: password
       };
   
@@ -24,15 +27,14 @@ document.addEventListener('DOMContentLoaded', () => {
       axios.post('http://localhost:4000/user', userData)
         .then(response => {
           // Sucesso: você pode redirecionar ou exibir uma mensagem
-          alert('Usuário cadastrado com sucesso!');
-          // Fechar o modal após o cadastro
-          const modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
-          modal.hide();
+          alert('Conta criada com sucesso!');
+          window.location.href = 'index.html';  // Redireciona para a página inicial ou login
         })
         .catch(error => {
           // Erro: exibir mensagem de erro
-          console.error('Erro ao cadastrar o usuário:', error);
-          alert('Erro ao cadastrar o usuário. Tente novamente.');
+          console.error('Erro ao criar a conta:', error);
+          alert('Erro ao criar a conta. Tente novamente.');
         });
     });
   });
+  
