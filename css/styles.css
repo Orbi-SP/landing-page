@@ -23,3 +23,41 @@ body {
   height: 35px;
   border-radius: 50%;
 }
+.modal-content {
+  background-color: #151599;
+  border-radius: 8px;
+}
+
+.modal-header {
+  border-bottom: 1px solid #fb00ff;
+}
+
+.modal-title {
+  color: #ffffff;
+}
+
+.modal-body {
+  color: #ffffff;
+}
+
+.form-control {
+  border-radius: 5px;
+  background-color: #000000;
+  border: 1px solid #fb00ff;
+  color: #ffffff;
+}
+
+.form-control:focus {
+  border-color: #fb00ff;
+  box-shadow: 0 0 5px rgba(251, 0, 255, 0.5);
+}
+
+.btn-primary {
+  background-color: #fb00ff;
+  border-color: #fb00ff;
+}
+
+.btn-primary:hover {
+  background-color: #910193;
+  border-color: #910193;
+}
