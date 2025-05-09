@@ -1,167 +1,185 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SAVIT - Sistema de Aprendizado Virtual</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Google Fonts: Montserrat -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAVIT - Sistema de Aprendizado Virtual</title>
 
-  <!-- HEADER -->
-  <header class="d-flex justify-content-between align-items-center p-3 fixed-top bg-transparent">
-    <img src="images/logo_savit_principal.png" alt="Logo SAVIT" class="logo" />
-    <div id="user-section">
-      <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
-    </div>
-  </header>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Google Fonts: Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-  <!-- Modal de Login -->
-  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="loginModalLabel">Login</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-        </div>
-        <div class="modal-body">
-          <form id="loginForm">
-            <div class="mb-3">
-              <label for="username" class="form-label">Usuário</label>
-              <input type="text" class="form-control" id="username" placeholder="Digite seu nome de usuário" required>
-            </div>
-            <div class="mb-3">
-              <label for="password" class="form-label">Senha</label>
-              <input type="password" class="form-control" id="password" placeholder="Digite sua senha" required>
-            </div>
-            <div class="d-flex justify-content-between">
-              <button type="submit" class="btn btn-primary">Entrar</button>
-              <a href="createAccount.html" class="btn btn-link">Criar Conta</a>
-            </div>
-          </form>
+  <body>
+
+    <!-- HEADER -->
+    <header id="mainHeader" class="d-flex justify-content-between align-items-center p-3 fixed-top bg-transparent">
+      <img src="images/logo_savit_principal.png" alt="Logo SAVIT" class="logo" />
+      <div id="user-section">
+        <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+      </div>
+    </header>
+
+    <!-- Modal de Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Login</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body">
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="username" class="form-label">Usuário</label>
+                <input type="text" class="form-control" id="username" placeholder="Digite seu nome de usuário" required>
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="password" placeholder="Digite sua senha" required>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-primary">Entrar</button>
+                <a href="createAccount.html" class="btn btn-link">Criar Conta</a>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- SCROLL PARALLAX BACKGROUND -->
+    <!-- SCROLL PARALLAX BACKGROUND -->
 
-  <section class="parallax-section" style="background-image: url('images/bg1.png');">
-    <!-- CARROSSEL -->
-    <section class="container my-5 pt-5">
-      <div id="carouselSavit" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="d-flex justify-content-between">
-              <img src="images/img1.jpg" class="d-block w-33" alt="Slide 1" />
-              <img src="images/img2.jpg" class="d-block w-33" alt="Slide 2" />
-              <img src="images/img3.jpg" class="d-block w-33" alt="Slide 3" />
+    <section class="parallax-section d-flex justify-content-center align-items-center" style="background-image: url('images/bg1.png');">
+      <!-- CARROSSEL -->
+      <section class="container my-5 pt-5">
+        <div id="carouselSavit" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-inner">
+          
+            <div class="carousel-item active">
+              <div class="d-flex justify-content-between">
+                <img src="images/placa-mae.png" class="carousel-img" alt="Slide 1">
+                <img src="images/memoria-ram.png" class="carousel-img" alt="Slide 2">
+                <img src="images/pc-tray.png" class="carousel-img" alt="Slide 3">
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="d-flex justify-content-between">
+                <img src="images/placa-mae.png" class="carousel-img" alt="Slide 4">
+                <img src="images/memoria-ram.png" class="carousel-img" alt="Slide 5">
+                <img src="images/pc-tray.png" class="carousel-img" alt="Slide 6">
+              </div>
+            </div>
+
+          <!-- Adicione mais grupos aqui se necessário -->
+
+          </div>
+
+          <!-- Botões -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselSavit" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselSavit" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+
+      </section>
+    </section>
+
+    <section class="parallax-section" style="background-image: url('images/bg2.png');">
+      <!-- SOBRE O PROJETO -->
+      <section class="container glass-section text-white">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="glass-card-dark p-4">
+              <h4>Pré-requisitos</h4>
+              <p>É necessário um smartphone com suporte a ARCore e uma webcam conectada ao computador. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo cum voluptatem consequuntur magni quis qui, dolore debitis labore facilis obcaecati, repudiandae similique earum ab vitae! Consectetur nam, expedita consequuntur dolorum explicabo a laboriosam et accusamus, assumenda porro ab neque optio nulla modi ex, maxime error harum unde tempore. Quasi nisi sint recusandae doloremque illo adipisci voluptatibus earum dolorem fuga, magni sapiente placeat modi similique, fugiat tenetur dicta ut obcaecati. Sit explicabo esse qui incidunt dolores dolorum culpa, nemo, hic modi cum eius ea tempore tenetur unde fuga voluptatem optio magnam iusto officia in impedit. Quaerat, assumenda? Quasi, veritatis velit. Ea?</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="glass-card-dark p-4">
+              <h4>Funcionamento</h4>
+              <p>A aplicação utiliza AR para simular a montagem de computadores em tempo real no seu ambiente. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam sapiente veritatis consequuntur voluptatibus ipsum distinctio minima quae temporibus voluptas, tenetur corporis! Eaque numquam expedita atque ullam. Error exercitationem explicabo nisi perferendis quibusdam quo autem deleniti, odio iure sapiente unde consectetur quidem necessitatibus doloribus eius tenetur, nostrum aspernatur dignissimos optio id sint pariatur, architecto labore. Similique minus consequuntur neque veniam repudiandae totam quaerat ut distinctio! Qui quo, error quas placeat blanditiis quaerat alias officia, ad in odio nulla eaque cumque, ipsa beatae est! Nobis mollitia iure labore saepe, optio, reiciendis ipsum cupiditate recusandae doloribus sunt facere inventore illum eum. Quis, eveniet.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="glass-card-dark p-4">
+              <h4>Futuro</h4>
+              <p>Planejamos implementar módulos de redes, simulações de servidores e infraestrutura em nuvem. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut corporis ullam nihil dicta vel quibusdam nemo impedit nobis, aperiam nam fugit consequatur animi assumenda similique natus voluptatem porro adipisci reprehenderit itaque suscipit nostrum, commodi enim. Beatae quam soluta velit quo libero quae accusantium? Quis natus obcaecati recusandae iure nihil sequi praesentium officiis tempora quisquam! Culpa natus a corporis magni enim, magnam ipsam. Optio, aliquam fuga aperiam repellat fugit asperiores quidem nulla facere vel nihil tenetur quaerat illum minus voluptas soluta libero pariatur corporis. Harum, placeat atque officia minima, tempora itaque ab dolor qui sint reprehenderit, officiis voluptate hic eveniet at?</p>
             </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselSavit" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselSavit" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </button>
-      </div>
-    </section>
-  </section>
-
-  <section class="parallax-section" style="background-image: url('images/bg2.png');">
-    <!-- SOBRE O PROJETO -->
-    <section class="container glass-section text-white">
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="glass-card-dark p-4">
-            <h4>Pré-requisitos</h4>
-            <p>É necessário um smartphone com suporte a ARCore e uma webcam conectada ao computador.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="glass-card-dark p-4">
-            <h4>Funcionamento</h4>
-            <p>A aplicação utiliza AR para simular a montagem de computadores em tempo real no seu ambiente.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="glass-card-dark p-4">
-            <h4>Futuro</h4>
-            <p>Planejamos implementar módulos de redes, simulações de servidores e infraestrutura em nuvem.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </section>
-
-  <section class="parallax-section" style="background-image: url('images/bg3.png');">
-    <!-- INTEGRANTES -->
-    <section class="container text-white">
-      <h2 class="text-center mb-4">Nosso Time</h2>
-      <div class="row text-center">
-        <div class="col-md-3">
-          <img src="images/user.jpg" class="img-fluid rounded" alt="Integrante" />
-          <h5>Lucas Miura</h5>
-          <div class="social-icons">
-            <a href="#"><i class="bi bi-github"></i></a>
-            <a href="#"><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <img src="images/user.jpg" class="img-fluid rounded" alt="Integrante" />
-          <h5>Pedro Silva</h5>
-          <div class="social-icons">
-            <a href="#"><i class="bi bi-github"></i></a>
-            <a href="#"><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <img src="images/user.jpg" class="img-fluid rounded" alt="Integrante" />
-          <h5>Éric Leandro</h5>
-          <div class="social-icons">
-            <a href="#"><i class="bi bi-github"></i></a>
-            <a href="#"><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <img src="images/user.jpg" class="img-fluid rounded" alt="Integrante" />
-          <h5>Kaique Pinto</h5>
-          <div class="social-icons">
-            <a href="#"><i class="bi bi-github"></i></a>
-            <a href="#"><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
+      </section>
     </section>
 
-  </section>
-
-  <section class="parallax-section" style="background-image: url('images/bg4.png');">
-    <!-- DOWNLOAD -->
-    <section class="container text-center text-white mb-5">
-      <p class="mb-3">Experimente o SAVIT e transforme seu aprendizado com realidade aumentada!</p>
-      <a href="#" class="btn btn-primary">Baixar Aplicação</a>
+    <section class="parallax-section" style="background-image: url('images/bg3.png');">
+      <!-- INTEGRANTES -->
+          <section class="container text-white">
+        <h2 class="text-center mb-4">Nosso Time</h2>
+        <div class="row text-center">
+          <div class="col-md-3">
+            <img src="images/Lucas.png" class="img-fluid rounded dark-img" alt="Integrante" />
+            <h5>Lucas Miura</h5>
+            <div class="social-icons">
+              <a href="https://github.com/LucasMiura"><i class="bi bi-github"></i></a>
+              <a href="https://www.linkedin.com/in/lucas-miura-1994102ba/"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <img src="images/Pedro.png" class="img-fluid rounded dark-img" alt="Integrante" />
+            <h5>Pedro Silva</h5>
+            <div class="social-icons">
+              <a href="https://github.com/PedroHenriqueDaSilva21"><i class="bi bi-github"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <img src="images/Eric.png" class="img-fluid rounded dark-img" alt="Integrante" />
+            <h5>Éric Leandro</h5>
+            <div class="social-icons">
+              <a href="https://github.com/Eric-Pinheiro"><i class="bi bi-github"></i></a>
+              <a href="https://www.linkedin.com/in/%C3%A9ric-pinheiro-abrah%C3%A3o-leandro-556991255/"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <img src="images/Kaique.png" class="img-fluid rounded dark-img" alt="Integrante" />
+            <h5>Kaique Pinto</h5>
+            <div class="social-icons">
+              <a href="https://github.com/KaiqueSilva32"><i class="bi bi-github"></i></a>
+              <a href="https://www.linkedin.com/in/kaique-silva-74403a30a/"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-dark text-white text-center p-3">
-    <img src="images/logo_orbi_principal.png" alt="Orbi Logo" height="40" class="mb-2" />
-    <p class="mb-0">&copy; 2025 Orbi. Todos os direitos reservados.</p>
-  </footer>
+    <section class="parallax-section d-flex justify-content-center align-items-center" style="background-image: url('images/bg4.png');">
+      <!-- DOWNLOAD -->
+      <section class="container text-center text-white mb-5">
+        <img src="images/logo_savit_alternativo.png" alt="Logo SAVIT" class="logo-savit mb-4">
+        <p class="mb-3">Experimente o SAVIT e transforme seu aprendizado com realidade aumentada!</p>
+        <a href="#" class="btn btn-primary btn-lg px-5 py-3 fs-4">Baixar Aplicação</a>
+      </section>
+    </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/user.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="js/login.js"></script>
-</body>
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center p-3">
+      <img src="images/logo_orbi_principal.png" alt="Orbi Logo" height="40" class="mb-2" class="logo-savit"/>
+      <p class="mb-0">&copy; 2025 Orbi. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/user.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/header.js"></script>
+  </body>
 </html>
