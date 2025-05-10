@@ -57,42 +57,42 @@
     <!-- SCROLL PARALLAX BACKGROUND -->
 
     <section class="parallax-section d-flex justify-content-center align-items-center" style="background-image: url('images/bg1.png');">
-      <!-- CARROSSEL -->
-      <section class="container my-5 pt-5">
-        <div id="carouselSavit" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-          <div class="carousel-inner">
+      <section class="container">
+        <div id="carouselSavit" class="carousel slide" data-bs-ride="carousel">
           
-            <div class="carousel-item active">
-              <div class="d-flex justify-content-between">
-                <img src="images/placa-mae.png" class="carousel-img" alt="Slide 1">
-                <img src="images/memoria-ram.png" class="carousel-img" alt="Slide 2">
-                <img src="images/pc-tray.png" class="carousel-img" alt="Slide 3">
-              </div>
-            </div>
-
-            <div class="carousel-item">
-              <div class="d-flex justify-content-between">
-                <img src="images/placa-mae.png" class="carousel-img" alt="Slide 4">
-                <img src="images/memoria-ram.png" class="carousel-img" alt="Slide 5">
-                <img src="images/pc-tray.png" class="carousel-img" alt="Slide 6">
-              </div>
-            </div>
-
-          <!-- Adicione mais grupos aqui se necessário -->
-
+          <!-- Indicadores -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselSavit" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselSavit" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselSavit" data-bs-slide-to="2" aria-label="Slide 3"></button>
           </div>
-
-          <!-- Botões -->
+      
+          <!-- Slides -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/placa-mae.png" class="d-block w-100 img-fluid" alt="Placa Mãe">
+            </div>
+            <div class="carousel-item">
+              <img src="images/memoria-ram.png" class="d-block w-100 img-fluid" alt="Memória RAM">
+            </div>
+            <div class="carousel-item">
+              <img src="images/pc-tray.png" class="d-block w-100 img-fluid" alt="PC Tray">
+            </div>
+          </div>
+      
+          <!-- Controles -->
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselSavit" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
           </button>
           <button class="carousel-control-next" type="button" data-bs-target="#carouselSavit" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
           </button>
         </div>
-
-      </section>
+      </section>      
     </section>
+    
 
     <section class="parallax-section" style="background-image: url('images/bg2.png');">
       <!-- SOBRE O PROJETO -->
@@ -159,14 +159,19 @@
   </section>
     </section>
 
-    <section class="parallax-section d-flex justify-content-center align-items-center" style="background-image: url('images/bg4.png');">
-      <!-- DOWNLOAD -->
-      <section class="container text-center text-white mb-5">
-        <img src="images/logo_savit_alternativo.png" alt="Logo SAVIT" class="logo-savit mb-4">
+    <section class="parallax-section position-relative d-flex justify-content-center align-items-center glass-section-wrapper">
+      <!-- Vídeo de fundo -->
+      <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover" style="z-index: -1;">
+        <source src="videos/bg-download.mp4" type="video/mp4" />
+      </video>
+    
+      <!-- Conteúdo com glassmorfismo -->
+      <section class="glass-card-dark text-center text-white p-5">
+        <img src="images/logo_savit_alternativo.png" alt="Logo SAVIT" class="img-fluid logo-savit mb-4" />
         <p class="mb-3">Experimente o SAVIT e transforme seu aprendizado com realidade aumentada!</p>
         <a href="#" class="btn btn-primary btn-lg px-5 py-3 fs-4">Baixar Aplicação</a>
       </section>
-    </section>
+    </section>    
 
     <!-- FOOTER -->
     <footer class="bg-dark text-white text-center p-3">
@@ -178,6 +183,6 @@
     <script src="js/user.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/login.js"></script>
-    <script src="js/header.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
