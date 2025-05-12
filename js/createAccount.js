@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
   
       // Fazer a requisição POST para o backend
-      axios.post('http://localhost:4000/user', userData)
+      axios.post('http://3.212.209.122:4000/user', userData)
         .then(response => {
           // Sucesso: você pode redirecionar ou exibir uma mensagem
           alert('Conta criada com sucesso!');

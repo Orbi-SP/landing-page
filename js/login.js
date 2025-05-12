@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
   
       // Fazer a requisição POST para o backend para autenticar o usuário
-      axios.post('http://localhost:4000/auth', loginData)
+      axios.post('http://3.212.209.122:4000/auth', loginData)
         .then(response => {
           // Sucesso: exibir mensagem ou redirecionar
           alert('Login bem-sucedido!');
