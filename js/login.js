@@ -18,17 +18,19 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(response => {
         alert('Login bem-sucedido!');
 
-        // Esconde o modal corretamente
         const modalElement = document.getElementById('loginModal');
         const modal = bootstrap.Modal.getOrCreateInstance(modalElement);
         modal.hide();
 
-        // Atualiza a seção do usuário
+        // Pega o nome do usuário da resposta da API
+        const userName = response.data.user.name;
+
+        // Atualiza a seção do usuário com o nome real
         const userSection = document.getElementById('user-section');
         userSection.innerHTML = `
           <div class="user-info d-flex align-items-center">
             <img src="images/user.jpg" class="profile-pic" alt="User" />
-            <span class="text-white ms-2">Usuário</span>
+            <span class="text-white ms-2">${userName}</span>
           </div>
         `;
       })
