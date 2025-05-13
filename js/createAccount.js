@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nameField = document.getElementById('name');
     const emailField = document.getElementById('email');
     const passwordField = document.getElementById('password');
+    const phoneField = document.getElementById('phone');
     
     // Quando o formulário for enviado
     createAccountForm.addEventListener('submit', function(event) {
@@ -15,12 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const name = nameField.value;
       const email = emailField.value;
       const password = passwordField.value;
+      const phone = phoneField.value
   
       // Criar o objeto que será enviado
       const userData = {
         name: name,
         email: email,
-        password: password
+        password: password,
+        phone: phone,
       };
   
       // Fazer a requisição POST para o backend
