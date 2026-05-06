@@ -101,38 +101,37 @@
           <div class="col-md-4">
             <div class="glass-card-dark p-4">
               <h4>Pré-requisitos</h4>
-              <p>Como o Software atualmente está em desenvolvimento e não há uma versão de build que funcione corretamente, você precisará ter acesso aos itens abaixo:
-                <ul>
-                  <li>
-                    Unity Engine: Você precisará ter instalado em sua máquina o Unity Engine para executar o jogo, pois como não há uma build funcional para o jogo de fato, você tem que executar ele no modo de desenvolvimento.
-                  </li>
-                  <li>
-                    Webcam: O jogo usa inteligência Artificial como Input dentro do jogo para que você possa mover as peças dentro dele, por conta disso você precisara de uma webcam conectada em sua máquina para que você possa jogar. E lembre-se, sempre que for jogar sempre utilize um local com boa iluminação
-                  </li>
-                  <li>
-                    Python: Você precisará do Python instalado para que se possa executar a IA que entendenrá os seus movimentos dentro de game
-                  </li>
-                </ul>
-              </p>
+              <p>O SAVIT evoluiu: agora é um projeto de <strong>Realidade Aumentada (AR)</strong> rodando diretamente no <strong>mobile</strong>. Para testar/desenvolver, você vai precisar:</p>
+              <ul>
+                <li><strong>Celular compatível com AR</strong> (ARCore/ARKit) e câmera funcionando.</li>
+                <li><strong>Rede local</strong> (celular e servidor na mesma rede) para comunicação via HTTP.</li>
+                <li><strong>Python</strong> (IA exposta via <strong>servidor HTTP</strong>, acessado pelo celular) para detectar/interpretar movimentos e movimentar as peças.</li>
+              </ul>
             </div>
           </div>
           <div class="col-md-4">
             <div class="glass-card-dark p-4">
               <h4>Funcionamento</h4>
-              <p>O Projeto utilizada o MediaPipe e o OpenCV para identificar os movimentos da sua mão pela Webcam, com isso você consegue montar computadores, instalar racks, configurar DVR's e Unifis e entender como tudo funciona dentro de equipamentos de rede e infraestrutura de TI de uma forma interativa e gamificada para mais informações de como configurar o projeto dentro de seu computador basta acessar o <a href="https://github.com/Orbi-SP/savit-game/tree/main"> repositório de nosso projeto</a>.</p>
+              <p>O jogo roda em <strong>AR no celular</strong> e se comunica com uma <strong>IA em Python via HTTP</strong> para ajudar no controle/movimentação das peças. No Unity, também usamos o MediaPipe (biblioteca integrada no projeto) para leitura/apoio dos movimentos.</p>
+              <p class="mb-2">MediaPipe utilizado (UPM/Git, tag <code>v0.16.3</code>):
+                <a href="https://github.com/homuler/MediaPipeUnityPlugin.git?path=Packages/com.github.homuler.mediapipe#v0.16.3">pacote</a>
+                (<a href="https://github.com/homuler/MediaPipeUnityPlugin/tree/v0.16.3/Packages/com.github.homuler.mediapipe">referência</a>).
+              </p>
+              <p class="mb-0">Repositório atual (AR): <a href="https://github.com/Orbi-SP/savit-AR">Orbi-SP/savit-AR</a>.<br>
+                Projeto anterior (3D): <a href="https://github.com/Orbi-SP/savit-game">Orbi-SP/savit-game</a>.
+              </p>
             </div>
           </div>
           <div class="col-md-4">
             <div class="glass-card-dark p-4">
               <h4>Futuro</h4>
-              <p>Para implementações futuras no momento são:
-                <ul>
-                  <li>Realizar a Montagem do Computador por completo, dando para instalar fontes, processador, HD e SSD e até mesmo entrar no seu PC virtual e instalar sistemas operacionais</li>
-                  <li>Criar uma Build utilizavél do jogo sem precisar utilizar o Unity</li>
-                  <li>Implementação da modalidade VR</li>
-                  <li>Acompanhamento de suas atividades conforme avanças em módulos dentro do game</li>
-                </ul>
-              </p>
+              <p>Implementações futuras planejadas:</p>
+              <ul>
+                <li>Realizar a montagem do computador por completo (fonte, processador, HD/SSD etc.).</li>
+                <li>Melhorar a experiência em AR (precisão, performance e estabilidade no mobile).</li>
+                <li>Melhorar/empacotar a IA em Python e a comunicação via HTTP (setup mais simples).</li>
+                <li>Acompanhamento das atividades conforme avanço em módulos dentro do game.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -141,9 +140,9 @@
 
     <section class="parallax-section" style="background-image: url('images/bg3.png');">
       <!-- INTEGRANTES -->
-          <section class="container text-white">
+      <section class="container text-white">
         <h2 class="text-center mb-4">Nosso Time</h2>
-        <div class="row text-center">
+        <div class="row text-center justify-content-center">
           <div class="col-md-3">
             <img src="images/Lucas.png" class="img-fluid rounded dark-img" alt="Integrante" />
             <h5>Lucas Miura</h5>
@@ -175,7 +174,17 @@
               <a href="https://github.com/KaiqueSilva32"><i class="bi bi-github"></i></a>
               <a href="https://www.linkedin.com/in/kaique-silva-74403a30a/"><i class="bi bi-linkedin"></i></a>
             </div>
-  </section>
+          </div>
+          <div class="col-md-3">
+            <img src="images/Luiz.png" class="img-fluid rounded dark-img" alt="Integrante" />
+            <h5>Luiz Medina</h5>
+            <div class="social-icons">
+              <a href="https://github.com/LuizWKM"><i class="bi bi-github"></i></a>
+              <a href="https://www.linkedin.com/in/luizwkm/"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
 
     <section class="parallax-section position-relative d-flex justify-content-center align-items-center glass-section-wrapper">
@@ -188,13 +197,13 @@
       <section class="glass-card-dark text-center text-white p-5">
         <img src="images/logo_savit_alternativo.png" alt="Logo SAVIT" class="img-fluid logo-savit mb-4" />
         <p class="mb-3">Experimente o SAVIT e transforme seu aprendizado de forma gamificada!</p>
-        <a href="https://github.com/Orbi-SP/savit-game/archive/refs/heads/main.zip" class="btn btn-primary btn-lg px-5 py-3 fs-4">Baixar Aplicação</a>
+        <a href="https://github.com/Orbi-SP/savit-AR/archive/refs/heads/main.zip" class="btn btn-primary btn-lg px-5 py-3 fs-4">Baixar Projeto (ZIP)</a>
       </section>
     </section>    
 
     <!-- FOOTER -->
     <footer class="bg-dark text-white text-center p-3">
-      <img src="images/logo_orbi_principal.png" alt="Orbi Logo" height="40" class="mb-2" class="logo-savit"/>
+      <img src="images/logo_orbi_principal.png" alt="Orbi Logo" height="40" class="mb-2 logo-savit" />
       <p class="mb-0">&copy; 2025 Orbi. Todos os direitos reservados.</p>
     </footer>
 
