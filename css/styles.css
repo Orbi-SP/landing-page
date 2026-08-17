@@ -2,8 +2,10 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: #000000;
   color: #ffffff;
-  margin-top: 70px;
+  margin-top: 82px;
 }
+
+h2{font-weight: bold;}
 
 .logo {
   height: 50px;
@@ -15,7 +17,12 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  min-height: 95vh;
+  height: 100%;
+}
+.parallax-about{
+padding-top: 30px;
+  padding-bottom: 50px;
 }
 
 .profile-pic {
@@ -33,6 +40,7 @@ body {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6); /* sombra mais escura */
   color: #fff;
   transition: transform 0.3s ease;
+  ;
 }
 
 .modal-header {
@@ -54,9 +62,21 @@ body {
   color: #ffffff;
 }
 
+.form-control::placeholder {
+  color: #929292;
+  transition: color 0.3s ease;
+}
+.form-control:hover::placeholder {
+  color: #ffffff;
+}
 .form-control:focus {
   border-color: #7d7d7d;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  background-color: #dbdbdb;
+  border: 1px solid #00d0ff;
+}
+.form-control:focus::placeholder {
+  color: #000000;
 }
 
 .btn-primary {
@@ -78,6 +98,7 @@ body {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6); /* sombra mais escura */
   color: #fff;
   transition: transform 0.3s ease;
+  height: 100%;
 }
 
 .glass-card-dark:hover {
@@ -110,6 +131,11 @@ body {
   object-fit: cover;
   max-height: 500px;
 }
+.video-carrousel {
+  object-fit: cover;
+  max-height: 500px;
+
+}
 
 /* Header transparente padrão */
 #mainHeader {
@@ -123,3 +149,6 @@ body {
   backdrop-filter: blur(8px); /* opcional: dá um efeito moderno */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* leve sombra */
 }
+video {filter: brightness(0.6) saturate(0.8);
+}
+
