@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Criando...';
     submitBtn.disabled = true;
 
-    axios.post('https://mlbx155o84.execute-api.us-east-1.amazonaws.com/v1/backend-page/user', userData)
+    axios.post('https://ihrws12500.execute-api.us-east-1.amazonaws.com/default/user', userData)
       .then(response => {
         // Sucesso: exibe mensagem verde
         alertBox.innerHTML = `<div class="alert alert-success" role="alert"><i class="bi bi-check-circle-fill"></i> Conta criada com sucesso! Redirecionando...</div>`;

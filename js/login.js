@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       password: password
     };
 
-    axios.post('https://mlbx155o84.execute-api.us-east-1.amazonaws.com/v1/backend-page/auth', loginData)
+    axios.post('https://ihrws12500.execute-api.us-east-1.amazonaws.com/default/auth', loginData)
       .then(response => {
         // Exibe mensagem bonita de sucesso (verde)
         alertBox.innerHTML = `<div class="alert alert-success" role="alert">Login realizado com sucesso!</div>`;
