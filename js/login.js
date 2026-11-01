@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     axios.post('https://ihrws12500.execute-api.us-east-1.amazonaws.com/default/auth', loginData)
       .then(response => {
+        localStorage.setItem('authToken', response.data.token);
         // Exibe mensagem bonita de sucesso (verde)
         alertBox.innerHTML = `<div class="alert alert-success" role="alert">Login realizado com sucesso!</div>`;
 
@@ -61,8 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.target && (e.target.id === 'logoutBtn' || e.target.closest('#logoutBtn'))) {
       e.preventDefault();
       
-      // Aqui você poderia limpar tokens no localStorage, se estivesse usando:
-      // localStorage.removeItem('token');
+      localStorage.removeItem('authToken');
 
       // Restaura o botão de Login original
       const userSection = document.getElementById('user-section');
